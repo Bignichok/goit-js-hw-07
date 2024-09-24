@@ -165,3 +165,32 @@ label {
   line-height: 24px;
   letter-spacing: 0.64px;
 }
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  gap: 16px;
+  border-radius: 8px;
+  background: #F6F6FE;
+  margin-bottom: 16px;
+}
+
+#controls input {
+  margin-bottom: 0;
+}
+
+#controls button[data-destroy] {
+  background: #FF4E4E;
+}
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 8px;
+  background: #F6F6FE;
+  padding: 32px;
+}

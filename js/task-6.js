@@ -12,16 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const DEFAULT_BOX_SIZE = 30;
     const STEP = 10;
 
-    let renderedBoxes = 0;
-
     const createBoxes = (amount) => {
         const boxesMarkup = Array.from({ length: amount }, (_, i) => {
-            const factor = renderedBoxes ? i + 1 + renderedBoxes : i;
-            const size = DEFAULT_BOX_SIZE + factor * STEP + "px";
+            const size = DEFAULT_BOX_SIZE + i * STEP + "px";
             return `<div style="background: ${getRandomHexColor()};width: ${size};height: ${size};"></div>`;
         }).join("");
-        boxes.insertAdjacentHTML("beforeend", boxesMarkup);
-        renderedBoxes += amount;
+        boxes.innerHTML = boxesMarkup;
+        input.value = 0;
     };
 
     const destroyBoxes = () => {

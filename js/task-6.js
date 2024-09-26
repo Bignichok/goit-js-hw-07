@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const destroyBoxes = () => {
         boxes.innerHTML = "";
-        renderedBoxes = 0;
     };
 
     controls.addEventListener("click", (e) => {
